@@ -1,11 +1,15 @@
-
-<main class="container" id="main" role="main">
-    <article aria-labelledby="form-title">
-      <h2 id="form-title">Create your profile</h2>
+<!DOCTYPE html>
+<html lang="en">
 <head>
   <meta charset="UTF-8">
+  <title>Create your profile</title>
   <link rel="stylesheet" href="style.css">
 </head>
+<body>
+  <main class="container" id="main" role="main">
+    <article aria-labelledby="form-title">
+      <h2 id="form-title">Create your profile</h2>
+
       <form action="#" method="post" enctype="multipart/form-data" novalidate>
 
         <fieldset>
@@ -24,118 +28,6 @@
           <div id="usernameHint" class="hint">3–20 characters; letters, numbers, _ or -.</div>
           <div class="error" id="usernameError">Username must be 3–20 chars (letters/numbers/_/-).</div>
 
-          <label for="email">Email <span aria-hidden="true">*</span></label>
-          <input id="email" name="email" type="email" required placeholder="you@example.com"
-                 aria-describedby="emailHint emailError" />
-          <div id="emailHint" class="hint">We'll use this to send important messages.</div>
-          <div class="error" id="emailError">Please enter a valid email address.</div>
-
-          <label for="phone">Phone number</label>
-          <input id="phone" name="phone" type="tel" inputmode="tel"
-                 pattern="^\+?[0-9\-\s]{7,20}$"
-                 placeholder="+45 12 34 56 78" aria-describedby="phoneHint phoneError" />
-          <div id="phoneHint" class="hint">Optional — use international format like +45 12 34 56 78.</div>
-          <div class="error" id="phoneError">Please enter a valid phone number (numbers, spaces, dashes allowed).</div>
-
-          <label for="birthdate">Date of birth <span aria-hidden="true">*</span></label>
-          <input id="birthdate" name="birthdate" type="date" required
-                 min="1900-01-01" max="2007-12-31" aria-describedby="birthHint birthError" />
-          <div id="birthHint" class="hint">You must be at least 18 years old.</div>
-          <div class="error" id="birthError">Please enter a valid birthdate (you must be 18+).</div>
-
-        </fieldset>
-
-        <fieldset>
-          <legend>Security</legend>
-
-          <label for="password">Password <span aria-hidden="true">*</span></label>
-          <input id="password" name="password" type="password" required
-                 pattern="(?=.*\d)(?=.*[a-z])(?=.*[A-Z])(?=.*\W).{8,}"
-                 minlength="8" placeholder="At least 8 characters" aria-describedby="pwdHint pwdError" />
-          <div id="pwdHint" class="hint">
-            Min 8 chars, at least one uppercase, one lowercase, one number and one special character.
-          </div>
-          <div class="error" id="pwdError">Password does not meet complexity requirements.</div>
-
-          <label for="confirmPassword">Confirm password <span aria-hidden="true">*</span></label>
-          <input id="confirmPassword" name="confirmPassword" type="password" required
-                 placeholder="Repeat password" aria-describedby="confirmHint confirmError" />
-          <div id="confirmHint" class="hint">Browser cannot check pair without JS — check carefully.</div>
-          <div class="error" id="confirmError">Passwords do not match (check manually).</div>
-        </fieldset>
-
-        <fieldset>
-          <legend>Profile & preferences</legend>
-
-          <label for="role">I am signing up as</label>
-          <div class="inline-controls" role="radiogroup" aria-labelledby="roleLabel">
-            <input type="radio" id="role-seeker" name="role" value="seeker" checked />
-            <label for="role-seeker" class="inline">Job seeker</label>
-
-            <input type="radio" id="role-recruiter" name="role" value="recruiter" />
-            <label for="role-recruiter" class="inline">Recruiter</label>
-
-            <input type="radio" id="role-other" name="role" value="other" />
-            <label for="role-other" class="inline">Other</label>
-          </div>
-
-
-
-        
-          <label for="location">Country / Region</label>
-          <select id="location" name="location" required aria-describedby="locationHint locationError">
-            <option value="">Choose...</option>
-            <option value="dk">Denmark</option>
-            <option value="se">Sweden</option>
-            <option value="no">Norway</option>
-            <option value="fi">Finland</option>
-            <option value="other">Other</option>
-          </select>
-          <div class="error" id="locationError">Please choose your country/region.</div>
-
-        
-          <fieldset class="small">
-            <legend>Work preference</legend>
-            <input type="radio" id="pref-remote" name="workPref" value="remote" checked />
-            <label for="pref-remote" class="inline">Remote</label>
-
-            <input type="radio" id="pref-hybrid" name="workPref" value="hybrid" />
-            <label for="pref-hybrid" class="inline">Hybrid</label>
-
-            <input type="radio" id="pref-onsite" name="workPref" value="onsite" />
-            <label for="pref-onsite" class="inline">On-site</label>
-          </fieldset>
-
-          <fieldset class="small">
-            <legend>Interests (choose all that apply)</legend>
-            <input id="int-web" type="checkbox" name="interests" value="webdev" />
-            <label for="int-web" class="inline">Web Dev</label>
-
-            <input id="int-data" type="checkbox" name="interests" value="data" />
-            <label for="int-data" class="inline">Data</label>
-
-            <input id="int-design" type="checkbox" name="interests" value="design" />
-            <label for="int-design" class="inline">Design</label>
-
-            <input id="int-marketing" type="checkbox" name="interests" value="marketing" />
-            <label for="int-marketing" class="inline">Marketing</label>
-          </fieldset>
-
-          <label for="salary">Desired salary (EUR/year)</label>
-          <input id="salary" name="salary" type="number" min="20000" max="500000" step="500" placeholder="50000" aria-describedby="salaryHint salaryError" />
-          <div id="salaryHint" class="hint">Optional — helps us match opportunities.</div>
-          <div class="error" id="salaryError">Enter a number between 20,000 and 500,000.</div>
-
-
-        <div class="form-actions">
-          <button type="submit" class="btn-primary">Create account</button>
-          <button type="reset" class="btn-secondary">Reset</button>
-        </div>
-
-      </form>
-    </article>
-  </main>
-
-
+          <label for="email">Email <span aria-hid
 
 
