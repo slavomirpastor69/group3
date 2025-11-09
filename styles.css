@@ -12,6 +12,7 @@ a:hover, a:focus { text-decoration: underline; outline: none; }
 
 .container { max-width: 920px; margin: 0 auto; padding: 1.25rem; }
 .site-header {
+  text-align:center;
   background: linear-gradient(180deg, #fff, #eef5ff);
   border-bottom: 1px solid #e6eefc;
 }
@@ -97,19 +98,6 @@ input[type="range"]::-webkit-slider-thumb {
   border-radius: 50%;
   margin-top: -6px;
 }
-
-.reveal-toggle {
-  display: inline-block;
-  margin-top: .5rem;
-  cursor: pointer;
-  font-weight: 500;
-  color: #1a73e8;
-}
-.sr-only {
-  position: absolute;
-  left: -9999px;
-  width: 1px; height: 1px; overflow: hidden;
-}
 .company-fields {
   display: none;
   margin-top: .5rem;
@@ -136,4 +124,5 @@ input[type="range"]::-webkit-slider-thumb {
   .lead, label { font-size: .95rem; }
   .form-actions { flex-direction: column; align-items: stretch; }
   .btn-primary, .btn-secondary { width: 100%; }
+
 }
